@@ -10,10 +10,15 @@ tail -n +2 "hvbp_hcahps_11_10_2016.csv" >surveys_responses.csv
 
 #Move these new files to HDFS system
 hdfs dfs -mkdir /user/root/hospital_compare
-hdfs dfs -put hospitals.csv /user/root/hospital_compare
-hdfs dfs -put effective_care.csv /user/root/hospital_compare
-hdfs dfs -put readmissions.csv /user/root/hospital_compare
-hdfs dfs -put measures.csv /user/root/hospital_compare
-hdfs dfs -put surveys_responses.csv /user/root/hospital_compare
+hdfs dfs -mkdir /user/root/hospital_compare/hospitals
+hdfs dfs -put hospitals.csv /user/root/hospital_compare/hospitals
+hdfs dfs -mkdir /user/root/hospital_compare/effective_care
+hdfs dfs -put effective_care.csv /user/root/hospital_compare/effective_care
+hdfs dfs -mkdir /user/root/hospital_compare/readmissions
+hdfs dfs -put readmissions.csv /user/root/hospital_compare/readmissions
+hdfs dfs -mkdir /user/root/hospital_compare/measures
+hdfs dfs -put measures.csv /user/root/hospital_compare/measures
+hdfs dfs -mkdir /user/root/hospital_compare/surveys_responses
+hdfs dfs -put surveys_responses.csv /user/root/hospital_compare/surveys_responses
 
 exit
