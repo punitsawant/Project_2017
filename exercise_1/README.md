@@ -1,4 +1,4 @@
-Exercise 1
+# Exercise 1
 
 In this exercise I will be working with data from the "Centers for Medicare and Medicaid Services(CMS)Hospital Compare" project.
 
